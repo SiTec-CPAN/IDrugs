@@ -15,10 +15,10 @@ module.exports = {
                 res.send({status: "Alterado com sucesso"});
                 return user;
             }).catch((err) => {
-                res.send({erro: `${err}`});
+                res.redirect("https://http.cat/422");
             });
         }).catch((err) => {
-            res.send({erro: `${err}`});
+            res.redirect("https://http.cat/422");
         });
     }
 }

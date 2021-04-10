@@ -7,7 +7,7 @@ module.exports = {
         await User.remove({_id:req.params.id}).then(() => {
             res.send({Deletado: "Sucesso"});
         }).catch((err) => {
-            res.send({Deletado: `${err}`});
+            res.redirect("https://http.cat/422");
         })
     }
 }

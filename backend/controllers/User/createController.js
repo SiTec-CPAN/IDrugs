@@ -9,7 +9,7 @@ module.exports = {
         }).then(() => {
             res.send({Cadastro: "Sucesso"});
         }).catch((err) => {
-            res.send({Cadastro: `${err}`});
+            res.redirect("https://http.cat/422");
         });
     }
 }
