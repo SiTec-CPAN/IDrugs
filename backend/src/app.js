@@ -9,4 +9,4 @@ app.use(express.json());
 app.use(cors(CORS_ROUTES));
 app.use(routes);
 
-export default app;
+module.exports = app;
