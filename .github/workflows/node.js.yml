@@ -1,12 +1,15 @@
 name: CI - Node Testes - Backend
 on: push
+
+defaults:
+  run:
+    working-directory: backend
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Change to backend folder
-        run: cd backend
       - name: Install modules
         run: yarn
       - name: Run tests
