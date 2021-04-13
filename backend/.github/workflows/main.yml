@@ -1,5 +1,5 @@
-name: CI - Backend
-on: push
+name: Node Testes - Backend
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
