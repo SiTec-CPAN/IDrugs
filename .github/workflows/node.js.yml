@@ -1,19 +1,11 @@
-name: Node.js CI
-
-on: [push]
-
+name: CI - Node Testes - Backend
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
-
     steps:
       - uses: actions/checkout@v2
-      - name: Install Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm test
+      - name: Install modules
+        run: yarn
+      - name: Run tests
+        run: yarn test
