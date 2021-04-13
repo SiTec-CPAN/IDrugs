@@ -15,10 +15,10 @@ module.exports = {
                 res.send({status: "Alterado com sucesso"});
                 return user;
             }).catch((err) => {
-                res.redirect("https://http.cat/422");
+                res.status(500).send({error: "Não foi possível editar"})
             });
         }).catch((err) => {
-            res.redirect("https://http.cat/422");
+            res.status(500).send({error: "Internal Server Error"})
         });
     }
 }
